@@ -2,6 +2,8 @@
 
 int main()
 {
+    double width, height, length;
+
     printf("Enter width, length, and height: ");
     
 
