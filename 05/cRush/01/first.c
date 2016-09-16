@@ -4,7 +4,7 @@ int main()
 {
     printf("Hello, ");
     printf("how are you?\n");
-    printf("Goodbye.\n");
+    printf("I'm fine.\nGoodbye.\n");
 
     return 0;
 }
