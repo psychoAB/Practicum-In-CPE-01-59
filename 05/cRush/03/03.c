@@ -2,10 +2,10 @@
 
 int main()
 {
-    int a =;
-    int b =;
-    int c =;
-    int d =;
+    int a = 203;
+    int b = 16320;
+    int c = 1011;
+    int d = 48;
 
     printf("a = %d\n", a);
     printf("b = %d\n", b);
