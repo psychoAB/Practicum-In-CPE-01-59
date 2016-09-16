@@ -8,10 +8,11 @@ int main()
     scanf("%d", &x);
     if(x%2)
     {
+        printf("This is an odd number.\n");
     }
-
     else
     {
+        printf("This is an even number.\n");
     }
 
     return 0;
