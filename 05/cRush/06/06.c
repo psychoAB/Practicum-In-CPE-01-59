@@ -11,3 +11,17 @@ int main()
 
     return 0;
 }
+
+int max_of_three(int a,int b, int c)
+{
+    int maxValue = a;
+    if(maxValue < b)
+    {
+        maxValue = b;
+    }
+    if(maxValue < c)
+    {
+        maxValue = c;
+    }
+    return maxValue;
+}
