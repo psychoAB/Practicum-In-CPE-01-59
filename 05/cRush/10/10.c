@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define SQUARE(x) x*x
+#define SQUARE(x) ((x) * (x))
 
 int main()
 {
