@@ -8,6 +8,9 @@ OBJS=peri.o
 %.flash: %.hex
 	avrdude -p $(MCU) -c usbasp -u -U flash:w:$<
 
+clean:
+	-rm *.hex *.elf *.o
+
 %.hex: %.elf
 	avr-objcopy -j .text -j .data -O ihex $< $@
 
