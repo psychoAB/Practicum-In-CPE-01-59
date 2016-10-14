@@ -12,7 +12,7 @@ void init_peripheral()
 
 void set_led(uint8_t pin,uint8_t state)
 {
-    if(state == ON)
+    if(state)
     {
         PORTC |= 1 << pin;
     }
@@ -24,5 +24,5 @@ void set_led(uint8_t pin,uint8_t state)
 
 void set_led_value(uint8_t value)
 {
-    PORTC = (PORTC & 0b11111000) + (x & 0b00000111);
+    PORTC = (PORTC & 0b11111000) + (value & 0b00000111);
 }
