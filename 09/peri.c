@@ -1,5 +1,5 @@
 #include <avr/io.h>
-#include "peri.h"
+#include "lib/peri.h"
 
 void init_peripheral()
 {

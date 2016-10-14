@@ -1,6 +1,6 @@
 #include <avr/io.h>
 #include <util/delay.h>
-#include "peri.h"
+#include "lib/peri.h"
 
 int main()
 {
