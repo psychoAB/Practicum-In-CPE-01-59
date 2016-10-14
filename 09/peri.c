@@ -3,15 +3,26 @@
 
 void init_peripheral()
 {
-  // copy จาก elab
+    DDRC |= (1 << PC0) | (1 << PC1) | (1 << PC2);
+    PORTC &= ~((1 << PC0) | (1 << PC1) | (1 << PC2));
+    DDRC &= ~((1 << PC3) | (1 << PC4));
+    PORTC |= (1 << PC3);
+    PORTC &= ~(1 << PC4);
 }
 
 void set_led(uint8_t pin,uint8_t state)
 {
-  // copy จาก elab
+    if(state == ON)
+    {
+        PORTC |= 1 << pin;
+    }
+    else
+    {
+        PORTC &= ~(1 << pin);
+    }
 }
 
 void set_led_value(uint8_t value)
 {
-  // copy จาก elab
+    PORTC = (PORTC & 0b11111000) + (x & 0b00000111);
 }
