@@ -3,12 +3,11 @@
 My Practicum-In-Computer-Engineer course code (0120423 01/59)
 
 ### Timeline
-* week04: first program on microcontroller
-    blink a led on microcontroller board
+* __week04: blink a led on microcontroller board__
 
-* week05: MakeFile for better life and rushing C course
+* __week05: MakeFile for better life and rushing C course__
 
-* week09: program microcontroller to work with peripheral board
+* __week09: program microcontroller to work with peripheral board__
     * peri.h / peri.c: peripheral lib
     * chase.c: turn led on peripheral board one by one
     * count.c: led on peripheral board count number 0-7 in binary
