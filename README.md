@@ -5,7 +5,7 @@ My Practicum-In-Computer-Engineer course code (0120423 01/59)
 ### Timeline
 * __week04: blink a led on microcontroller board__
 
-* __week05: MakeFile for better life and rushing C course__
+* __week05: Makefile for better life and rushing C course__
 
 * __week09: program microcontroller to work with peripheral board__
     * peri.h / peri.c: peripheral lib
