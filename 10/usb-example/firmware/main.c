@@ -20,6 +20,7 @@ usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 
     /* declared as static so they stay valid when usbFunctionSetup returns */
     static uint8_t switch_state;  
+    static uint16_t analogLight;
 
     if (rq->bRequest == RQ_SET_LED)
     {
@@ -49,7 +50,7 @@ usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 
     else if (rq->bRequest == RQ_GET_LIGHT)
     {
-        uint16_t analogLight = read_adc(PC4);
+        analogLight = read_adc(PC4);
         usbMsgPtr = &analogLight;
         return sizeof(analogLight);
     }
