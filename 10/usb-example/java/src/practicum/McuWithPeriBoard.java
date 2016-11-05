@@ -4,7 +4,7 @@ import org.usb4java.Device;
 
 public class McuWithPeriBoard extends McuBoard
 {
-	private static final byte RQ_SET_LED       = 0;
+    private static final byte RQ_SET_LED       = 0;
     private static final byte RQ_SET_LED_VALUE = 1;
     private static final byte RQ_GET_SWITCH    = 2;
     private static final byte RQ_GET_LIGHT     = 3;
@@ -31,6 +31,7 @@ public class McuWithPeriBoard extends McuBoard
      */
     public void setLedValue(int value)
     {
+        this.write(RQ_SET_LED_VALUE, (short)0, (short)value);
     }
 
     /**
@@ -51,6 +52,7 @@ public class McuWithPeriBoard extends McuBoard
      */
     public int getLight()
     {
-        return 0;
+        byte[] ret = this.read(RQ_GET_LIGHT, (short)0, (short)0);
+        return (ret[0] & 0xff) | ((ret[1] & 0xff) << 8);
     }
 }
