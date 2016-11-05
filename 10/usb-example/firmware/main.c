@@ -29,6 +29,13 @@ usbMsgLen_t usbFunctionSetup(uint8_t data[8])
         return 0;
     }
 
+    else if(rq->bRequest == RQ_SET_LED_VALUE)
+    {
+        uint8_t led_value = rq->wValue.bytes[0];
+        set_led_value(led_value);
+        return 0;
+    }
+
     else if (rq->bRequest == RQ_GET_SWITCH)
     {
         switch_state = IS_SWITCH_PRESSED();
@@ -38,6 +45,13 @@ usbMsgLen_t usbFunctionSetup(uint8_t data[8])
 
         /* return the number of bytes of data to be returned to host */
         return 1;
+    }
+
+    else if (rq->bRequest == RQ_GET_LIGHT)
+    {
+        uint16_t analogLight = read_adc(PC4);
+        usbMsgPtr = &analogLight;
+        return sizeof(analogLight);
     }
 
     /* default for not implemented requests: return no data back to host */
